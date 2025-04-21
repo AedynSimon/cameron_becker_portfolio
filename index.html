@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-------------------------------->
+    <!-- Head -->
+    <!-------------------------------->
+    <head>
+        <!-------------------------------->
+        <!-- Meta -->
+        <!-------------------------------->
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cameron Becker | Portfolio</title>
+
+        <!-- SEO: Primary Meta Tags -->
+        <meta name="title" content="Cameron Becker | Musician & Creative Technologist">
+        <meta name="description" content="Portfolio site of Cameron Becker — drummer, musician and educator based in Fort Collins. Explore projects, booking, media, and more.">
+        <meta name="keywords" content="Cameron Becker, drummer, music, jazz, percussion, lessons, gigs, Fort Collins, band, teacher, musician portfolio">
+        <meta name="author" content="Cameron Becker">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://www.cameronbecker.com/" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.cameronbecker.com/">
+        <meta property="og:title" content="Cameron Becker | Musician & Educator">
+        <meta property="og:description" content="Check out Cameron Becker's portfolio – music, tech, videos, gallery, and booking options.">
+        <meta property="og:image" content="https://www.cameronbecker.com/assets/preview.png">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="https://www.cameronbecker.com/">
+        <meta name="twitter:title" content="Cameron Becker | Musician & Creative Technologist">
+        <meta name="twitter:description" content="Visit the portfolio of Cameron Becker for booking, music lessons, performances, and projects.">
+        <meta name="twitter:image" content="https://www.cameronbecker.com/assets/preview.png">
+
+        <!-- Favicons & External Assets -->
+        <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-------------------------------->
+        <!-- Custom CSS -->
+        <!-------------------------------->
+
+        <!-- CSS -->
+        <style>
+            /*===============================
+            FONT IMPORT & BASE STYLES
+            ===============================*/
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+            body {
+                font-family: 'Poppins', sans-serif;
+                scroll-behavior: smooth;
+            }
+
+
+            /*===============================
+            GLOBAL UTILITIES
+            ===============================*/
+            .gradient-text {
+                background: linear-gradient(90deg, #00581f, #009e52, #007629);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+
+
+            /*===============================
+            NAVIGATION STYLES
+            ===============================*/
+            .nav-link {
+                position: relative;
+            }
+
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: linear-gradient(90deg, #00ff8c, #004600);
+                transition: width 0.3s ease;
+            }
+
+            .nav-link:hover::after,
+            .nav-link.active::after {
+                width: 100%;
+            }
+
+
+            /*===============================
+            COMPONENT: GLASS CARD
+            ===============================*/
+            .glass-card {
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+
+            /*===============================
+            COMPONENT: PROJECT CARD
+            ===============================*/
+            .project-card {
+                transition: all 0.3s ease;
+            }
+
+            .project-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+
+            /*===============================
+            COMPONENT: GALLERY ITEM
+            ===============================*/
+            .gallery-item {
+                transition: all 0.3s ease;
+            }
+            .gallery-item:hover {
+                transform: scale(1.03);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            }
+
+
+            /*===============================
+            COMPONENT: SKILL BAR
+            ===============================*/
+            .skill-bar {
+                height: 8px;
+                border-radius: 4px;
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+            .skill-progress {
+                height: 100%;
+                border-radius: 4px;
+                background: linear-gradient(90deg, #006435, #00d67d);
+            }
+
+
+            /*===============================
+            TIMELINE STYLES
+            ===============================*/
+            .timeline-item:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                left: 16px;
+                top: 46px;
+                height: calc(100% - 32px);
+                width: 2px;
+                background: rgb(255, 255, 255);
+            }
+        </style>
+    </head>
+
+    <!-------------------------------->
+    <!-- Body -->
+    <!-------------------------------->
+    <body class="overflow-x-hidden bg-stone-200 text-black cursor-default">
+
+        <!-------------------------------->
+        <!-- Navigation -->
+        <!-------------------------------->
+        <nav class="fixed z-50 w-full bg-stone-200 bg-opacity-50 backdrop-blur-sm backdrop-filter shadow-lg" role="navigation" aria-label="Main Navigation">
+
+            <!-- Navbar Content Container -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Flex Wrapper: Brand / Nav Links / Mobile Button -->
+                <div class="flex items-center justify-between h-16">
+
+                    <!-- Logo / Brand -->
+                    <a href="#home" class="flex items-center" aria-label="Cameron Becker Home">
+                        <span class="text-3xl font-bold gradient-text">CB.</span>
+                    </a>
+
+                    <!-- Desktop Navigation Menu -->
+                    <div class="hidden lg:block">
+                        <ul class="ml-10 flex items-baseline space-x-8" role="menubar">
+                            <li><a href="#home" class="nav-link active px-3 py-2 text-sm font-medium" role="menuitem">Home</a></li>
+                            <li><a href="#about" class="nav-link px-3 py-2 text-sm font-medium" role="menuitem">About</a></li>
+                            <li><a href="#gallery" class="nav-link px-3 py-2 text-sm font-medium" role="menuitem">Gallery</a></li>
+                            <li><a href="#experience" class="nav-link px-3 py-2 text-sm font-medium" role="menuitem">Experience</a></li>
+                            <li><a href="#booking" class="nav-link px-3 py-2 text-sm font-medium" role="menuitem">Booking</a></li>
+                            <li><a href="#contact" class="nav-link px-3 py-2 text-sm font-medium" role="menuitem">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="lg:hidden">
+                        <button id="menu-toggle" class="text-black hover:scale-110 transition-transform duration-200 ease-in-out focus:outline-none" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu (Dropdown) -->
+            <div id="mobile-menu" class="hidden lg:hidden glass-card" role="menu" aria-label="Mobile Navigation">
+                <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <li><a href="#home" class="block px-3 py-2 text-base font-medium active" role="menuitem">Home</a></li>
+                    <li><a href="#about" class="block px-3 py-2 text-base font-medium" role="menuitem">About</a></li>
+                    <li><a href="#gallery" class="block px-3 py-2 text-base font-medium" role="menuitem">Gallery</a></li>
+                    <li><a href="#experience" class="block px-3 py-2 text-base font-medium" role="menuitem">Experience</a></li>
+                    <li><a href="#booking" class="block px-3 py-2 text-base font-medium" role="menuitem">Booking</a></li>
+                    <li><a href="#contact" class="block px-3 py-2 text-base font-medium" role="menuitem">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-------------------------------->
+        <!-- Hero Section -->
+        <!-------------------------------->
+        <section id="home" class="min-h-screen flex items-center justify-center pt-16" aria-label="Hero Section">
+
+            <!-- Section Wrapper -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+
+                <!-- Flex Container -->
+                <div class="flex flex-col md:flex-row items-center">
+
+                    <!-- Left Column: Text Content -->
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+
+                        <!-- Main Heading -->
+                        <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
+                            I'm <span class="gradient-text">Cameron Becker</span>
+                        </h1>
+
+                        <!-- Subheading -->
+                        <h2 class="text-2xl md:text-3xl font-semibold mb-6">
+                            Percussionist / Musician & <span class="gradient-text">Educator</span>
+                        </h2>
+
+                        <!-- Description Paragraph -->
+                        <p class="text-stone-700 mb-8 max-w-lg">
+                            I’m a passionate performer and educator based in Colorado, specializing in percussion and music instruction. Whether I’m on stage or teaching in the classroom, I strive to inspire creativity and rhythm in others.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex space-x-4">
+
+                            <!-- Book Me Button -->
+                            <a href="#booking" class="px-6 py-3 bg-gradient-to-r from-emerald-500 to-emerald-700 rounded-lg font-medium text-stone-200 hover:opacity-90 transition" aria-label="Book Cameron for lessons or performances">
+                                Book Me
+                            </a>
+
+                            <!-- View Content Button -->
+                            <a href="#gallery" class="px-6 py-3 border border-black rounded-lg font-medium hover:bg-black hover:text-stone-100 transition" aria-label="View Cameron's gallery and past work">
+                                View Content
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Profile Image -->
+                    <div class="md:w-1/2 flex justify-center">
+
+                        <!-- Image Wrapper -->
+                        <div class="relative w-64 h-64 md:w-80 md:h-80" aria-hidden="true">
+
+                            <!-- Blurred Gradient Background -->
+                            <div class="absolute inset-0 bg-black rounded-full opacity-30 blur-md"></div>
+
+                            <!-- Profile Image -->
+                            <div class="relative w-full h-full flex items-center justify-center">
+                                <img src="TODO" alt="TODO" class="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-------------------------------->
+        <!-- About Section -->
+        <!-------------------------------->
+        <section id="about" class="py-20" aria-label="About Me">
+
+            <!-- Outer Container -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Title -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
+                        About <span class="gradient-text">Me</span>
+                    </h2>
+
+                    <!-- Underline -->
+                    <div class="w-28 h-1 bg-gradient-to-r from-emerald-500 to-emerald-700 mx-auto"></div>
+                </div>
+                
+                <!-- Content Box -->
+                <div class="flex flex-col md:flex-row items-center">
+                
+                    <!-- Profile Picture -->
+                    <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                        <div class="relative w-64 h-64" aria-hidden="true">
+                            <div class="absolute -inset-2 bg-black rounded-lg blur-lg opacity-20"></div>
+                            <img src="TODO" alt="TOOD" class="relative w-full h-full rounded-lg object-cover">
+                        </div>
+                    </div>
+        
+                    <!-- Short Description -->
+                    <div class="md:w-2/3 md:pl-12">
+
+                        <!-- Subheading -->
+                        <h3 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">Who am I?</h3>
+
+                        <!-- Description -->
+                        <p class="text-stone-700 mb-6">
+                            TODO
+                        </p>
+                    </div>
+        
+                    <!-- Personal Info Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h4 class="font-medium mb-2"><i class="fas fa-user mr-2 text-purple-500 text-xl"></i> Name</h4>
+                            <p class="text-stone-700">Cameron Becker</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-2"><i class="fas fa-envelope mr-2 text-blue-500 text-xl"></i> Email</h4>
+                            <p class="text-stone-700">cameronbecker26@gmail.com</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-2"><i class="fas fa-phone mr-2 text-red-500 text-xl"></i> Phone</h4>
+                            <p class="text-stone-700">(972) 922 4425</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-2"><i class="fas fa-map-marker-alt mr-2 text-emerald-500 text-xl"></i> Location</h4>
+                            <p class="text-stone-700">Fort Collins, CO</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="mt-12 flex justify-center md:justify-center">
+                    <div class="flex space-x-4">
+                        <a href="TODO" target="_blank" rel="noopener noreferrer"
+                        class="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center hover:bg-red-500 hover:border-red-500 hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="TODO" target="_blank" rel="noopener noreferrer"
+                        class="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center hover:bg-pink-500 hover:border-pink-500 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+        
+                <!-- Listening Section -->
+                <div class="mt-20" aria-label="Currently Listening To">
+
+                    <!-- Section Title -->
+                    <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-center">
+                        Currently <span class="gradient-text">Listening To</span>
+                    </h3>
+
+                    <!-- Listening Box -->
+                    <div class="px-4 sm:px-6 lg:px-8">
+                        <div class="bg-black bg-opacity-90 backdrop-blur-md p-6 sm:p-8 md:p-10 rounded-xl shadow-xl max-w-3xl mx-auto text-white mt-10 sm:mt-14 md:mt-20 mb-10 sm:mb-14 md:mb-20">
+
+                            <!-- Album Info -->
+                            <div class="flex flex-col md:flex-row items-center gap-6 mb-6">
+
+                                <!-- Image -->
+                                <img src="TODO" alt="TODO" class="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-lg shadow-lg object-cover">
+
+                                <!-- Album Description -->
+                                <div class="text-left">
+                                    <h4 class="text-xl text-stone-100 font-bold">Record | Artist</h4>
+                                    <p class="text-emerald-500">On Repeat Recently</p>
+                                </div>
+                            </div>
+                
+                            <!-- Tracklist -->
+                            <ul class="text-left text-stone-100 font-semibold space-y-2">
+                                <li><i class="fas fa-music text-emerald-500 mr-2"></i> Song – Artist</li>
+                                <li><i class="fas fa-music text-emerald-500 mr-2"></i> Song – Artist</li>
+                                <li><i class="fas fa-music text-emerald-500 mr-2"></i> Song – Artist</li>
+                                <li><i class="fas fa-music text-emerald-500 mr-2"></i> Song – Artist</li>
+                                <li><i class="fas fa-music text-emerald-500 mr-2"></i> Song – Artist</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-------------------------------->
+        <!-- Gallery Section -->
+        <!-------------------------------->
+        <section id="gallery" class="py-20" aria-labelledby="gallery-heading">
+
+            <!-- Outer Container -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+                <!-- Section Title -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
+                        My <span class="gradient-text">Gallery</span>
+                    </h2>
+
+                    <!-- Underline -->
+                    <div class="w-28 h-1 bg-gradient-to-r from-emerald-500 to-emerald-700 mx-auto"></div>
+                </div>
+                
+                <!-- Photo Section -->
+                <div class="mb-20">
+
+                    <!-- Section Title -->
+                    <h3 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center">Photos</h3>
+
+                    <!-- Photo Card Layout -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+                        <!-- Photo 1 -->
+                        <figure class="gallery-item rounded-xl overflow-hidden shadow-md bg-white">
+
+                            <!-- Image -->
+                            <img src="TODO" alt="TODO" class="w-full h-48 object-cover" loading="lazy">
+
+                            <!-- Photo Description -->
+                            <figcaption class="p-4">
+                                <h4 class="font-medium">TITLE</h4>
+                                <p class="text-sm text-stone-700">DESCRIPTION</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+          
+                <!-- Video Section -->
+                <div class="mb-20">
+
+                    <!-- Section Title -->
+                    <h3 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center">Videos</h3>
+
+                    <!-- Video Card Layout -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                        <!-- Video 1 -->
+                        <article class="gallery-item bg-white rounded-xl overflow-hidden shadow-md">
+                            
+                            <!-- Video / Image -->
+                            <div class="aspect-w-16 aspect-h-9">
+                                <iframe class="w-full h-64" src="https://www.youtube.com/embed/TULzRqEarcw" title="Cameron Becker performing Chain by Kazunori Miyake" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                            </div>
+
+                            <!-- Video Description -->
+                            <div class="p-4">
+                                <h4 class="font-medium">Chain - Kazunori Miyake performed by Cameron Becker</h4>
+                                <p class="text-sm text-stone-700">DESCRIPTION</p>
+                            </div>
+                        </article>
+
+                        <!-- Video 2 -->
+                        <article class="gallery-item bg-white rounded-xl overflow-hidden shadow-md">
+                            
+                            <!-- Video / Image -->
+                            <div class="aspect-w-16 aspect-h-9">
+                                <iframe class="w-full h-64" src="https://www.youtube.com/embed/MQuQqbY_TzY" title="Cameron Becker performing Chain by Kazunori Miyake" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                            </div>
+
+                            <!-- Video Description -->
+                            <div class="p-4">
+                                <h4 class="font-medium">LIP 2025 Finals Day - Field Cam</h4>
+                                <p class="text-sm text-stone-700">DESCRIPTION</p>
+                            </div>
+                        </article>
+
+                        <!-- Video 3 -->
+                        <article class="gallery-item bg-white rounded-xl overflow-hidden shadow-md">
+                            
+                            <!-- Video / Image -->
+                            <div class="aspect-w-16 aspect-h-9">
+                                <iframe class="w-full h-64" src="https://www.youtube.com/embed/jtLZbKAI39c" title="Cameron Becker performing Chain by Kazunori Miyake" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                            </div>
+
+                            <!-- Video Description -->
+                            <div class="p-4">
+                                <h4 class="font-medium">BK 2024 Ageout Cirgle - Go On</h4>
+                                <p class="text-sm text-stone-700">DESCRIPTION</p>
+                            </div>
+                        </article>
+
+                        <!-- Video 4 -->
+                        <article class="gallery-item bg-white rounded-xl overflow-hidden shadow-md">
+                            
+                            <!-- Video / Image -->
+                            <div class="aspect-w-16 aspect-h-9">
+                                <iframe class="w-full h-64" src="https://www.youtube.com/embed/hc0qapU5kN8" title="Cameron Becker performing Chain by Kazunori Miyake" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                            </div>
+
+                            <!-- Video Description -->
+                            <div class="p-4">
+                                <h4 class="font-medium">Playing with BC Manjunath - Korvai in Khanda Gathi</h4>
+                                <p class="text-sm text-stone-700">DESCRIPTION</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                
+                <!-- Project Section -->
+                <div class="mb-12">
+
+                    <!-- Section Title -->
+                    <h3 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center">My Projects</h3>
+
+                    <!-- Project Card Layout -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                        <!-- Project 1 -->
+                        <article class="project-card bg-white rounded-xl overflow-hidden shadow-xl transition duration-300" itemscope itemtype="https://schema.org/CreativeWork">
+
+                            <!-- Image w/Overlay -->
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="TODO" alt="TODO" class="w-full h-full object-cover" itemprop="image">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-40"></div>
+                            </div>
+
+                            <!-- Project Content Area -->
+                            <div class="p-6">
+
+                                <!-- Project Title and Action Icons -->
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="text-xl font-semibold" itemprop="headline">TITLE</h4>
+
+                                    <!-- External Site Links -->
+                                    <div class="flex space-x-2">
+                                        <a href="TODO" target="_blank" rel="noopener noreferrer" class="text-stone-700 hover:text-purple-500" aria-label="Project details"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+
+                                <!-- Content Description -->
+                                <p class="text-stone-700 mb-4" itemprop="description">
+                                    DESCRIPTION
+                                </p>
+                                <meta itemprop="author" content="Cameron Becker">
+
+                                <!-- Other attributes -->
+                                <div class="flex flex-wrap gap-2 text-xs">
+                                    <span class="px-2 py-1 bg-blue-700 text-white rounded">FEATURE</span>
+                                    <span class="px-2 py-1 bg-blue-700 text-white rounded">FEATURE</span>
+                                    <span class="px-2 py-1 bg-blue-700 text-white rounded">FEAUTRE</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                
+                <!-- CTA Button to View more Content-->
+                <div class="text-center mt-10">
+                    <a href="TODO" target="_blank" rel="noopener noreferrer" class="px-6 py-3 border border-black rounded-lg font-medium hover:bg-black hover:text-white transition inline-flex items-center" aria-label="TODO">
+                        View More Content <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-------------------------------->
+        <!-- Experience Section -->
+        <!-------------------------------->
+        <section id="experience" class="py-20">
+
+            <!-- Outer Container -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+                <!-- Section Heading -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
+                        Experience & <span class="gradient-text">Skills</span>
+                    </h2>
+
+                    <!-- Underline -->
+                    <div class="w-28 h-1 bg-gradient-to-r from-emerald-500 to-emerald-700 mx-auto"></div>
+                </div>
+            
+                <!-- Timeline Section -->
+                <div class="max-w-3xl mx-auto mb-20 space-y-8">
+                    
+                    <!-- Experience 1 -->
+                    <div class="timeline-item relative pl-16">
+                        
+                        <!-- Left Side -->
+                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-stone-700 to-emerald-700 flex items-center justify-center">
+                            <i class="fas fa-briefcase text-white"></i>
+                        </div>
+
+                        <!-- Right Side -->
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+
+                            <!-- Title & Timeline -->
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                                <h3 class="text-xl font-semibold">TODO</h3>
+                                <span class="text-sm text-stone-700">TODO - TODO</span>
+                            </div>
+
+                            <!-- Location & Description -->
+                            <h4 class="text-emerald-500 mb-3">TODO</h4>
+                            <p class="text-stone-700">TODO</p>
+                        </div>
+                    </div>
+            
+                    <!-- Experience 2 -->
+                    <div class="timeline-item relative pl-16">
+
+                        <!-- Left Side -->
+                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-stone-700 to-emerald-700 flex items-center justify-center">
+                            <i class="fas fa-briefcase text-white"></i>
+                        </div>
+
+                        <!-- Right Side -->
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+
+                            <!-- Title & Timeline -->
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                                <h3 class="text-xl font-semibold">TODO</h3>
+                                <span class="text-sm text-stone-700">TODO - TODO</span>
+                            </div>
+
+                            <!-- Location & Description -->
+                            <h4 class="text-emerald-500 mb-3">TODO</h4>
+                            <p class="text-stone-700">TODO</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Skills Section -->
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl sm:text-4xl md:text-5xl sm:text-4xl font-bold mb-4">
+                        Musical & <span class="gradient-text">Professional Skills</span>
+                    </h3>
+                </div>
+            
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+            
+                    <!-- Instruments -->
+                    <div>
+                        <h4 class="text-xl font-bold mb-6">Instruments</h4>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2"><span>Drumset</span><span>67%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 67%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2"><span>Marimba</span><span>70%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2"><span>Vibraphone</span><span>40%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 40%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2"><span>Timpani</span><span>39%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 39%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2"><span>Snare Drum</span><span>45%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 45%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Professional -->
+                    <div>
+                        <h4 class="text-xl font-bold mb-6">Professional</h4>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2"><span>Sight-Reading</span><span>95%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2"><span>Communication</span><span>90%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2"><span>Team Work</span><span>85%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2"><span>Project Management</span><span>70%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2"><span>Creativity</span><span>95%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2"><span>Leadership</span><span>84%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 84%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2"><span>Problem Solving</span><span>90%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-------------------------------->
+        <!-- Booking Section -->
+        <!-------------------------------->
+        <section id="booking" class="py-20">
+
+            <!-- Outer Container -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          
+                <!-- Section Heading -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
+                        You Can <span class="gradient-text">Book Me</span>
+                    </h2>
+
+                    <!-- Underline -->
+                    <div class="w-28 h-1 bg-gradient-to-r from-emerald-500 to-emerald-700 mx-auto"></div>
+                </div>
+            
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+                    <!-- Drum Set Lessons -->
+                    <div class="booking-card bg-white rounded-xl border shadow-lg p-6 flex flex-col justify-between">
+
+                        <!-- Title -->
+                        <h3 class="text-xl sm:text-2xl font-bold text-blue-500 mb-2">Drum Set Lessons</h3>
+
+                        <!-- Subheading -->
+                        <p class="mb-4 text-stone-700">
+                            One-on-one drum set lessons catered towards you and your needs.
+                        </p>
+
+                        <!-- Cost -->
+                        <p class="text-xl sm:text-2xl font-semibold mb-4">$25/hr</p>
+
+                        <!-- Features -->
+                        <ul class="space-y-2 text-sm text-stone-700 mb-6 text-left">
+                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Beginner to Advanced</li>
+                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Personalized Guidance</li>
+                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Flexible Scheduling</li>
+                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Online & In-person</li>
+                        </ul>
+
+                        <!-- CTA Button -->
+                        <a href="#contact" class="bg-blue-600 text-stone-100 py-2 px-4 rounded hover:bg-blue-700 transition">
+                            Inquire Now
+                        </a>
+                    </div>
+            
+                    <!-- Music Lessons -->
+                    <div class="booking-card bg-white rounded-xl border shadow-lg p-6 flex flex-col justify-between">
+
+                        <!-- Title -->
+                        <h3 class="text-xl sm:text-2xl font-bold text-purple-500 mb-2">Music Lessons</h3>
+
+                        <!-- Subheading -->
+                        <p class="mb-4 text-stone-700">
+                            Private music lessons from singing, song writing, classical percussion, orchestral percussion, reading, and more tailored to your needs.
+                        </p>
+
+                        <!-- Cost -->
+                        <p class="text-xl sm:text-2xl font-semibold mb-4">$30/hr</p>
+
+                        <!-- Features -->
+                        <ul class="space-y-2 text-sm text-stone-700 mb-6 text-left">
+                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Beginner to Advanced</li>
+                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Personalized Guidance</li>
+                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Flexible Scheduling</li>
+                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Online & In-person</li>
+                        </ul>
+
+                        <!-- CTA Button -->
+                        <a href="#contact" class="bg-purple-500 text-stone-100 py-2 px-4 rounded hover:bg-purple-700 transition">
+                            Book a Lesson
+                        </a>
+                    </div>
+            
+                    <!-- Band Performance -->
+                    <div class="booking-card bg-white rounded-xl border shadow-lg p-6 flex flex-col justify-between">
+
+                        <!-- Title -->
+                        <h3 class="text-xl sm:text-2xl font-bold text-emerald-500 mb-2">Live Performance</h3>
+
+                        <!-- Subheading -->
+                        <p class="mb-4 text-stone-700">
+                            Hire me or my band for gigs, recitals, or collabs.
+                        </p>
+
+                        <!-- Cost -->
+                        <p class="text-xl sm:text-2xl font-semibold mb-4">Starting at $50/Event</p>
+
+                        <!-- Features -->
+                        <ul class="space-y-2 text-sm text-stone-700 mb-6 text-left">
+                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Solo or band sets</li>
+                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Custom setlists</li>
+                        </ul>
+
+                        <!-- CTA Button -->
+                        <a href="#contact" class="bg-emerald-500 text-stone-100 py-2 px-4 rounded hover:bg-emerald-700 transition">
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-------------------------------->
+        <!-- Contact Section -->
+        <!-------------------------------->
+        <section id="contact" class="py-20 bg-stone-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+                <!-- Section Title -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
+                        Get In <span class="gradient-text">Touch</span>
+                    </h2>
+
+                    <!-- Underline -->
+                    <div class="w-28 h-1 bg-gradient-to-r from-emerald-500 to-emerald-700 mx-auto"></div>
+                </div>
+            
+                <!-- Grid Layout: Left (info) / Right (form) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+                    <!-- Left Side: Contact Info -->
+                    <div>
+
+                        <!-- Subheading -->
+                        <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+
+                        <!-- Contact Description Paragraph -->
+                        <p class="text-stone-700 mb-8">
+                            Feel free to reach out to me for any questions or opportunities. I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+                        </p>
+            
+                        <!-- Info List -->
+                        <div class="space-y-6">
+                            <!-- Location -->
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center mr-4 shadow-lg">
+                                    <i class="fas fa-map-marker-alt text-emerald-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Location</h4>
+                                    <p class="text-stone-700">Fort Collins, CO</p>
+                                </div>
+                            </div>
+            
+                            <!-- Email -->
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center mr-4 shadow-lg">
+                                    <i class="fas fa-envelope text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Email</h4>
+                                    <p class="text-stone-700">cameronbecker26@gmail.com</p>
+                                </div>
+                            </div>
+            
+                            <!-- Phone -->
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center mr-4 shadow-lg">
+                                    <i class="fas fa-phone text-red-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Phone</h4>
+                                    <p class="text-stone-700">(972) 922 4425</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Social Media Icons -->
+                        <div class="mt-8">
+                            <h4 class="font-medium mb-4">Follow Me</h4>
+
+                            <!-- Social Buttons -->
+                            <div class="flex space-x-4">
+                                <a href="TODO" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center hover:border-red-500 hover:bg-red-500 hover:text-stone-100 transition" aria-label="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="TODO" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center hover:border-pink-500 hover:bg-pink-500 hover:text-stone-100 transition" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Right Side: Contact Form -->
+                    <div>
+
+                        <!-- Form Element with Spacing Between Inputs -->
+                        <form class="space-y-6">
+                            
+                            <!-- Name & Email -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block mb-2 font-medium">Your Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                </div>
+                                <div>
+                                    <label for="email" class="block mb-2 font-medium">Your Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                </div>
+                            </div>
+            
+                            <!-- Subject -->
+                            <div>
+                                <label for="subject" class="block mb-2 font-medium">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            </div>
+            
+                            <!-- Message -->
+                            <div>
+                                <label for="message" class="block mb-2 font-medium">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
+                            </div>
+            
+                            <!-- Submit Button -->
+                            <button type="submit" class="px-6 py-3 text-stone-100 bg-gradient-to-r from-emerald-500 to-emerald-700 rounded-lg font-medium hover:opacity-90 transition w-full md:w-auto shadow-lg">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-------------------------------->
+        <!-- Footer -->
+        <!-------------------------------->
+        <footer class="py-8 bg-black" aria-label="Site Footer">
+            
+            <!-- Outer Container -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+                <!-- Responsive Flex Layout -->
+                <div class="flex flex-col md:flex-row justify-between items-center">
+            
+                    <!-- Logo / Brand -->
+                    <div class="mb-4 md:mb-0">
+                        <span class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text">
+                            CB.
+                        </span>
+                    </div>
+            
+                    <!-- Copyright -->
+                    <div class="text-stone-100 font-semibold text-sm">
+                        © 2025 Cameron Becker.
+                    </div>
+            
+                    <!-- Back to Top Button -->
+                    <div class="mt-4 md:mt-0">
+                        <a href="#home" class="px-4 py-2 text-black bg-stone-100 rounded-lg font-medium hover:bg-stone-300 transition inline-flex items-center" aria-label="Scroll to top of page">
+                            Back to Top <i class="fas fa-arrow-up ml-2" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-------------------------------->
+        <!-- JavaScript -->
+        <!-------------------------------->
+        <script>
+            // -----------------------------
+            // 1. Mobile Menu Toggle
+            // -----------------------------
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuToggle?.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // -----------------------------
+            // 2. Smooth Scroll & Active Link Handling
+            // -----------------------------
+            const navLinks = document.querySelectorAll('.nav-link');
+            const allAnchors = document.querySelectorAll('a[href^="#"]');
+
+            allAnchors.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Close mobile menu on click (if open)
+                    mobileMenu.classList.add('hidden');
+
+                    // Set active class on clicked nav link
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    if (this.classList.contains('nav-link')) {
+                        this.classList.add('active');
+                    }
+
+                    // Smooth scroll to target section
+                    const targetId = this.getAttribute('href');
+                    if (targetId !== '#') {
+                        document.querySelector(targetId).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // -----------------------------
+            // 3. Update Active Link on Scroll
+            // -----------------------------
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY;
+
+                document.querySelectorAll('section').forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+
+                    if (
+                        scrollPosition >= sectionTop &&
+                        scrollPosition < sectionTop + sectionHeight
+                    ) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            });
+
+            // -----------------------------
+            // 4. Contact Form Submission (Mocked)
+            // -----------------------------
+            const contactForm = document.querySelector('form');
+
+            contactForm?.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Thank you for your message! I will get back to you soon.');
+                this.reset();
+            });
+        </script>
+    </body>
+</html>
