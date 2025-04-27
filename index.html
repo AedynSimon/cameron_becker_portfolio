@@ -96,10 +96,9 @@
             COMPONENT: GLASS CARD
             ===============================*/
             .glass-card {
-                background: rgba(255, 255, 255, 0.1);
+                background: rgba(255, 255, 255, 0.12);
                 backdrop-filter: blur(10px);
                 -webkit-backdrop-filter: blur(10px);
-                border: 1px solid rgba(255, 255, 255, 0.2);
             }
 
 
@@ -166,7 +165,7 @@
         <!-------------------------------->
         <!-- Navigation -->
         <!-------------------------------->
-        <nav class="fixed z-50 w-full bg-white bg-opacity-70 backdrop-blur-sm backdrop-filter shadow-lg" role="navigation" aria-label="Main Navigation">
+        <nav class="fixed z-50 w-full text-white bg-black bg-opacity-30 backdrop-blur-sm backdrop-filter shadow-xl" role="navigation" aria-label="Main Navigation">
 
             <!-- Navbar Content Container -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -193,7 +192,7 @@
 
                     <!-- Mobile Menu Button -->
                     <div class="lg:hidden">
-                        <button id="menu-toggle" class="text-black hover:scale-110 transition-transform duration-200 ease-in-out focus:outline-none" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <button id="menu-toggle" class="text-white hover:scale-110 transition-transform duration-200 ease-in-out focus:outline-none" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
                             <i class="fas fa-bars text-2xl"></i>
                         </button>
                     </div>
@@ -201,7 +200,7 @@
             </div>
 
             <!-- Mobile Navigation Menu (Dropdown) -->
-            <div id="mobile-menu" class="hidden lg:hidden glass-card" role="menu" aria-label="Mobile Navigation">
+            <div id="mobile-menu" class="hidden lg:hidden" role="menu" aria-label="Mobile Navigation">
                 <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                     <li><a href="#home" class="block px-3 py-2 text-base font-medium active" role="menuitem">Home</a></li>
                     <li><a href="#about" class="block px-3 py-2 text-base font-medium" role="menuitem">About</a></li>
@@ -216,7 +215,7 @@
         <!-------------------------------->
         <!-- Hero Section -->
         <!-------------------------------->
-        <section id="home" class="min-h-screen flex items-center justify-center pt-16" aria-label="Hero Section">
+        <section id="home" class="py-20" aria-label="Hero section">
 
             <!-- Section Wrapper -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -229,7 +228,7 @@
 
                         <!-- Main Heading -->
                         <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
-                            I'm <span class="gradient-text">Cameron Becker</span>
+                            <span class="gradient-text">Cameron Becker</span>
                         </h1>
 
                         <!-- Subheading -->
@@ -238,20 +237,22 @@
                         </h2>
 
                         <!-- Description Paragraph -->
-                        <p class="text-stone-700 mb-8 max-w-lg">
-                            I’m a passionate performer and educator based in Colorado, specializing in percussion and music instruction. Whether I’m on stage or teaching in the classroom, I strive to inspire creativity and rhythm in others.
+                        <p class="text-stone-700 text-justify mb-8 max-w-lg">
+                            My main value within music education is service; connection within the arts is human and relatable. Culminating a community for artistic connection and friendship in this manner is something so foreign to students before joining a musical ensemble!
+                            <br><br>
+                            Navigating new relationships with people and musical activities is an act that requires honest and open guidance, which I find value and joy learning to provide.
                         </p>
 
                         <!-- CTA Buttons -->
                         <div class="flex space-x-4">
 
                             <!-- Book Me Button -->
-                            <a href="#booking" class="px-6 py-3 bg-gradient-to-r from-emerald-500 to-emerald-700 rounded-lg font-medium text-stone-200 hover:opacity-90 transition" aria-label="Book Cameron for lessons or performances">
+                            <a href="#booking" class="px-6 py-3 bg-gradient-to-r from-emerald-500 to-emerald-700 rounded-lg font-medium text-stone-200 hover:opacity-70 transition" aria-label="Book Cameron for lessons or performances">
                                 Book Me
                             </a>
 
                             <!-- View Content Button -->
-                            <a href="#gallery" class="px-6 py-3 border border-black rounded-lg font-medium hover:bg-black hover:text-stone-100 transition" aria-label="View Cameron's gallery and past work">
+                            <a href="#gallery" class="px-6 py-3 border border-white rounded-lg font-medium hover:bg-white hover:text-black transition" aria-label="View Cameron's gallery and past work">
                                 View Content
                             </a>
                         </div>
@@ -264,11 +265,11 @@
                         <div class="relative w-64 h-64 md:w-80 md:h-80" aria-hidden="true">
 
                             <!-- Blurred Gradient Background -->
-                            <div class="absolute inset-0 bg-black rounded-full opacity-30 blur-md"></div>
+                            <div class="absolute inset-0 bg-black rounded-full opacity-30 blur-xl"></div>
 
                             <!-- Profile Image -->
                             <div class="relative w-full h-full flex items-center justify-center">
-                                <img src="TODO" alt="TODO" class="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover">
+                                <img src="/assets/hero/solo_professional_vertical.jpeg" alt="TODO" class="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover">
                             </div>
                         </div>
                     </div>
@@ -279,10 +280,13 @@
         <!-------------------------------->
         <!-- About Section -->
         <!-------------------------------->
-        <section id="about" class="py-20" aria-label="About Me">
+        <section id="about" class="relative min-h-screen flex items-center justify-center text-white pt-16 bg-cover bg-center bg-no-repeat" style="background-image: url('/assets/gallery/photos/solo_candid.jpeg');" aria-label="About Me">
 
-            <!-- Outer Container -->
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Background Dark Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
+            <!-- Outer Container for all content -->
+            <div class="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <!-- Section Title -->
                 <div class="text-center mb-16">
@@ -294,70 +298,83 @@
                     <div class="w-28 h-1 bg-gradient-to-r from-emerald-500 to-emerald-700 mx-auto"></div>
                 </div>
                 
-                <!-- Content Box -->
-                <div class="flex flex-col md:flex-row items-center">
-                
-                    <!-- Profile Picture -->
-                    <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
-                        <div class="relative w-64 h-64" aria-hidden="true">
-                            <div class="absolute -inset-2 bg-black rounded-lg blur-lg opacity-20"></div>
-                            <img src="TODO" alt="TODO" class="relative w-full h-full rounded-lg object-cover">
+                <!-- Main Content: Flex Layout -->
+                <div class="flex flex-col md:flex-row md:items-start gap-10">
+
+                    <!-- Left Column: Contact Info -->
+                    <div class="md:w-1/3 flex flex-col items-center md:items-start space-y-6">
+
+                        <!-- Contact Info Grid -->
+                        <div class="grid grid-cols-1 gap-4 text-sm w-full">
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">
+                                    <i class="fas fa-user mr-2 text-purple-500 text-xl"></i> Name
+                                </h4>
+                                <p class="font-medium">Cameron Becker</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">
+                                    <i class="fas fa-envelope mr-2 text-blue-500 text-xl"></i> Email
+                                </h4>
+                                <p class="font-medium">cameronbecker26@gmail.com</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">
+                                    <i class="fas fa-phone mr-2 text-red-500 text-xl"></i> Phone
+                                </h4>
+                                <p class="font-medium">(972) 922 4425</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">
+                                    <i class="fas fa-map-marker-alt mr-2 text-emerald-500 text-xl"></i> Location
+                                </h4>
+                                <p class="font-medium">Fort Collins, CO</p>
+                            </div>
                         </div>
                     </div>
-        
-                    <!-- Short Description -->
-                    <div class="md:w-2/3 md:pl-12">
 
+                    <!-- Right Column: About Text -->
+                    <div class="md:w-2/3">
                         <!-- Subheading -->
-                        <h3 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">Who am I?</h3>
+                        <h3 class="text-4xl font-semibold mb-4">Who am I?</h3>
 
-                        <!-- Description -->
-                        <p class="text-stone-700 mb-6">
-                            TODO
+                        <!-- Description Text -->
+                        <p class="text-stone-100 text-justify leading-relaxed">
+                            Howdy! My name is Cameron Becker and I am a percussion sophomore in CSU's undergraduate music education program. 
+                            I am a MSOE teaching artist for percussion and have taught at several local programs in Fort Collins, Loveland, 
+                            Greeley, and Denver. I have performed with the University Symphony Orchestra, toured internationally with the 
+                            Wind Symphony, and have served leadership in the CSU Marching Band.
+                            <br><br>
+                            I have performed on snare drum with the Blue Knights Percussion Ensemble, Blue Knights Drum & Bugle Corps, 
+                            and Phantom Regiment. I also connect with our local music scene by playing drums for local indie and funk bands. 
+                            I also teach private percussion lessons to students in Loveland and Denver.
                         </p>
-                    </div>
-        
-                    <!-- Personal Info Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                        <div>
-                            <h4 class="font-medium mb-2"><i class="fas fa-user mr-2 text-purple-500 text-xl"></i> Name</h4>
-                            <p class="text-stone-700">Cameron Becker</p>
-                        </div>
-                        <div>
-                            <h4 class="font-medium mb-2"><i class="fas fa-envelope mr-2 text-blue-500 text-xl"></i> Email</h4>
-                            <p class="text-stone-700">cameronbecker26@gmail.com</p>
-                        </div>
-                        <div>
-                            <h4 class="font-medium mb-2"><i class="fas fa-phone mr-2 text-red-500 text-xl"></i> Phone</h4>
-                            <p class="text-stone-700">(972) 922 4425</p>
-                        </div>
-                        <div>
-                            <h4 class="font-medium mb-2"><i class="fas fa-map-marker-alt mr-2 text-emerald-500 text-xl"></i> Location</h4>
-                            <p class="text-stone-700">Fort Collins, CO</p>
-                        </div>
                     </div>
                 </div>
 
                 <!-- Social Media Links -->
-                <div class="mt-12 flex justify-center md:justify-center">
+                <div class="mt-12 flex justify-center">
                     <div class="flex space-x-4">
-                        <a href="TODO" target="_blank" rel="noopener noreferrer"
-                        class="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center hover:bg-red-500 hover:border-red-500 hover:text-white transition">
+                        <!-- YouTube Link -->
+                        <a href="https://www.youtube.com/@CameronBecker26" target="_blank" rel="noopener noreferrer"
+                        class="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-red-500 hover:border-red-500 hover:text-white transition">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="TODO" target="_blank" rel="noopener noreferrer"
-                        class="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center hover:bg-pink-500 hover:border-pink-500 hover:text-white transition">
+
+                        <!-- Instagram Link -->
+                        <a href="https://www.instagram.com/uhhcambecker/" target="_blank" rel="noopener noreferrer"
+                        class="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center hover:bg-pink-500 hover:border-pink-500 hover:text-white transition">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
                 </div>
-        
+
                 <!-- Listening Section -->
                 <div class="mt-20" aria-label="Currently Listening To">
 
                     <!-- Section Title -->
                     <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-center">
-                        Currently <span class="gradient-text">Listening To</span>
+                        On Rotation <span class="gradient-text">This Month</span>
                     </h3>
 
                     <!-- Listening Box -->
@@ -366,17 +383,16 @@
 
                             <!-- Album Info -->
                             <div class="flex flex-col md:flex-row items-center gap-6 mb-6">
-
-                                <!-- Image -->
-                                <img src="TODO" alt="TODO" class="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-lg shadow-lg object-cover">
+                                <!-- Album Image -->
+                                <img src="TODO" alt="Album Cover" class="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-lg shadow-lg object-cover">
 
                                 <!-- Album Description -->
                                 <div class="text-left">
-                                    <h4 class="text-xl text-stone-100 font-bold">Record | Artist</h4>
+                                    <h4 class="text-xl font-bold text-stone-100">Record | Artist</h4>
                                     <p class="text-emerald-500">On Repeat Recently</p>
                                 </div>
                             </div>
-                
+
                             <!-- Tracklist -->
                             <ul class="text-left text-stone-100 font-semibold space-y-2">
                                 <li><i class="fas fa-music text-emerald-500 mr-2"></i> Song – Artist</li>
@@ -385,6 +401,234 @@
                                 <li><i class="fas fa-music text-emerald-500 mr-2"></i> Song – Artist</li>
                                 <li><i class="fas fa-music text-emerald-500 mr-2"></i> Song – Artist</li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- End of Outer Container -->
+        </section>
+
+        <!-------------------------------->
+        <!-- Booking Section -->
+        <!-------------------------------->
+        <section id="booking" class="py-20 bg-stone-50">
+
+            <!-- Outer Container -->
+            <div class="max-w-3xl mx-auto px-6 text-center">
+        
+                <!-- Section Heading -->
+                <div class="mb-14">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-3">
+                    You Can <span class="gradient-text">Book Me</span>
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-emerald-700 mx-auto"></div>
+                </div>
+            
+                <!-- Booking Card -->
+                <div class="bg-white rounded-2xl border shadow-xl p-8 sm:p-12 flex flex-col items-center text-center">
+            
+                    <!-- Title -->
+                    <h3 class="text-2xl sm:text-3xl font-bold text-purple-500 mb-6">
+                    Music & Percussion Services
+                    </h3>
+            
+                    <!-- Description -->
+                    <p class="mb-8 text-stone-700 max-w-2xl text-base sm:text-lg">
+                    Offering private lessons, live performance bookings, and full orchestral percussion coaching — tailored to fit your needs. 
+                    Available for all ages and experience levels, both online and in-person.
+                    </p>
+            
+                    <!-- Price -->
+                    <p class="text-xl sm:text-2xl font-semibold mb-10">
+                    $25–$50/hr or Event
+                    </p>
+            
+                    <!-- Services List -->
+                    <ul class="text-stone-700 text-left text-sm sm:text-base space-y-3 mb-10 max-w-xl mx-auto list-disc list-inside">
+                    <li>Private drum set lessons for all styles, from beginner basics to advanced techniques.</li>
+                    <li>Concert snare drum, mallet percussion (marimba, xylophone, glockenspiel), and timpani instruction.</li>
+                    <li>Full orchestral percussion training, including accessory percussion and excerpt preparation.</li>
+                    <li>Marching percussion coaching for snare, tenor drums, bass drum, and cymbals.</li>
+                    <li>Music theory tutoring, including sight-reading, rhythm studies, and aural skills.</li>
+                    <li>Private lessons in classical, jazz, pop, and world percussion traditions.</li>
+                    <li>Audition preparation for honor bands, All-State, college entrance, and drum corps.</li>
+                    <li>Coaching for percussion ensemble, solo recital pieces, and chamber music.</li>
+                    <li>Conducting basics and score reading for young musicians and aspiring music educators.</li>
+                    <li>Assistance with percussion setup, maintenance, tuning, and recording techniques.</li>
+                    <li>Live performance bookings: solo percussion, drum set gigs, or full band collaborations.</li>
+                    <li>Customized lessons tailored to your musical goals, available both online and in-person.</li>
+                    </ul>
+            
+                    <!-- CTA Button -->
+                    <a href="#contact" class="bg-purple-500 text-white py-3 px-8 rounded-lg hover:bg-purple-700 transition text-base sm:text-lg font-semibold">
+                    Contact Me For Booking
+                    </a>
+                </div>
+            
+                <!-- Bottom Blurb -->
+                <div class="mt-14 text-center text-stone-600 text-sm sm:text-base max-w-2xl mx-auto">
+                    <p>
+                    Whether you're a beginner picking up sticks for the first time, a student preparing for an audition, or an advanced player looking to refine your craft, I offer personalized lessons designed to meet you where you are and help you reach the next level.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-------------------------------->
+        <!-- Experience Section -->
+        <!-------------------------------->
+        <section id="experience" class="py-20 bg-black bg-opacity-90 backdrop-blur-md text-white">
+
+            <!-- Outer Container -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+                <!-- Section Heading -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
+                        My <span class="gradient-text">Experience</span>
+                    </h2>
+                    <div class="w-28 h-1 bg-gradient-to-r from-emerald-500 to-emerald-700 mx-auto"></div>
+                </div>
+            
+                <!-- Work Experience Subsection -->
+                <div class="mb-20">
+                    <h3 class="text-3xl font-bold mb-10 text-center text-emerald-400">Work Experience</h3>
+            
+                    <div class="max-w-3xl mx-auto space-y-8">
+                                
+                        <!-- Experience 1 -->
+                        <div class="timeline-item relative pl-16">
+                            <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-stone-700 to-emerald-700 flex items-center justify-center">
+                            <i class="fas fa-briefcase text-white"></i>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                                <h3 class="text-xl font-semibold text-black">Percussion Specialist</h3>
+                                <span class="text-sm text-stone-700">Spring 2024 - Ongoing</span>
+                            </div>
+                            <h4 class="text-emerald-500 mb-4">West Ridge Academy</h4>
+                            <ul class="list-disc list-inside space-y-2 text-stone-700 text-sm sm:text-base">
+                                <li>Responsible for teaching fundamentals on mallets, snare, timpani, and concert accessories to 6th and 7th grade percussionists.</li>
+                                <li>Focused on fundamentals of counting, sight-reading rhythms and pitches in both treble and bass clef.</li>
+                                <li>Focused on culturally responsive listening and identification of music in different styles.</li>
+                            </ul>
+                            </div>
+                        </div>
+                
+                        <!-- Experience 2 -->
+                        <div class="timeline-item relative pl-16">
+                            <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-stone-700 to-emerald-700 flex items-center justify-center">
+                            <i class="fas fa-briefcase text-white"></i>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                                <h3 class="text-xl font-semibold text-black">Battery Technician - Outdoor/Indoor</h3>
+                                <span class="text-sm text-stone-700">Fall 2024 - Ongoing</span>
+                            </div>
+                            <h4 class="text-emerald-500 mb-4">Loveland Marching Percussion</h4>
+                            <ul class="list-disc list-inside space-y-2 text-stone-700 text-sm sm:text-base">
+                                <li>Lead a high school marching battery section through music, style, and visual performance fundamentals.</li>
+                                <li>Encouraged students to listen to different sound qualities and colors.</li>
+                                <li>Handled transport, upkeep, and inventory of all marching percussion equipment.</li>
+                            </ul>
+                            </div>
+                        </div>
+                
+                        <!-- Experience 3 -->
+                        <div class="timeline-item relative pl-16">
+                            <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-stone-700 to-emerald-700 flex items-center justify-center">
+                            <i class="fas fa-briefcase text-white"></i>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                                <h3 class="text-xl font-semibold text-black">Front Ensemble Technician</h3>
+                                <span class="text-sm text-stone-700">Spring 2025</span>
+                            </div>
+                            <h4 class="text-emerald-500 mb-4">Blue Knights Percussion Ensemble Open Group</h4>
+                            <ul class="list-disc list-inside space-y-2 text-stone-700 text-sm sm:text-base">
+                                <li>Coached intermediate/advanced front ensemble percussionists in indoor percussion techniques.</li>
+                                <li>Focused on musicality, ensemble listening, and performance quality.</li>
+                                <li>Managed transport and maintenance of keyboard instruments, electronics, and hardware.</li>
+                            </ul>
+                            </div>
+                        </div>
+                
+                        <!-- Experience 4 -->
+                        <div class="timeline-item relative pl-16">
+                            <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-stone-700 to-emerald-700 flex items-center justify-center">
+                                <i class="fas fa-briefcase text-white"></i>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                                    <h3 class="text-xl font-semibold text-black">Band Teaching Artist/TOT Mentor</h3>
+                                    <span class="text-sm text-stone-700">Spring 2025 - Ongoing</span>
+                                </div>
+                                <h4 class="text-emerald-500 mb-4">MSOE</h4>
+                                <ul class="list-disc list-inside space-y-2 text-stone-700 text-sm sm:text-base">
+                                    <li>Led middle school percussionists in foundational techniques for wind band playing.</li>
+                                    <li>Mentored high school students training to become future music educators.</li>
+                                    <li>Assisted in managing logistics for rehearsals and events.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Performance Experience Subsection -->
+                <div>
+                    <h3 class="text-3xl font-bold mb-10 text-center text-emerald-400">Performance Experience</h3>
+            
+                    <div class="max-w-3xl mx-auto space-y-8">
+                
+                        <div class="timeline-item relative pl-16">
+                            <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-stone-700 to-purple-700 flex items-center justify-center">
+                                <i class="fas fa-music text-white"></i>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                                    <h3 class="text-xl font-semibold text-black">Phantom Regiment Drum & Bugle Corps</h3>
+                                    <span class="text-sm text-stone-700">January 2025 - Ongoing</span>
+                                </div>
+                                <ul class="list-disc list-inside space-y-2 text-stone-700 text-sm sm:text-base">
+                                    <li>Snare member for the Phantom Regiment in the summer of 2025.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item relative pl-16">
+                            <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-stone-700 to-purple-700 flex items-center justify-center">
+                                <i class="fas fa-music text-white"></i>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                                    <h3 class="text-xl font-semibold text-black">Blue Knights Drum & Bugle Corps / Blue Knights Percussion Ensemble</h3>
+                                    <span class="text-sm text-stone-700">September 2023 - August 2024</span>
+                                </div>
+                                <ul class="list-disc list-inside space-y-2 text-stone-700 text-sm sm:text-base">
+                                    <li>Snare member of both the Blue Knights Indoor and Outdoor groups, learning how to listen as an ensemble member as well as providing strong visual performance.</li>
+                                    <li>Battery Rookie of the Year for the Blue Knights Drum & Bugle Corps 2024 season.</li>
+                                    <li>Learned about processes of drum maintenance (cleaning, waxing, greasing, pitch-matching) and basics of marching show design/staging.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item relative pl-16">
+                            <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-stone-700 to-purple-700 flex items-center justify-center">
+                                <i class="fas fa-music text-white"></i>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                                    <h3 class="text-xl font-semibold text-black">Performing In Ensembels</h3>
+                                    <span class="text-sm text-stone-700">September 2023 - Ongoing</span>
+                                </div>
+                                <ul class="list-disc list-inside space-y-2 text-stone-700 text-sm sm:text-base">
+                                    <li>Two-year member of the CSU marching band, snare section leader 2024 season.</li>
+                                    <li>Past member of Dr. Rachel Waddel’s University Orchestra and current member of Dr. Rebecca Phillips’ Wind Symphony.</li>
+                                    <li>Learn the state of professionalism in the performance side of our field and can replicate the standards within future wind band sections.</li>
+                                    <li>Travel to Spain in Spring 2025 to perform on tour with the Wind Symphony.</li>
+                                    <li>Drummer for a local indie rock band, Jupiter Machine. Performed several venues and local gatherings.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -420,15 +664,74 @@
 
                         <!-- Photo 1 -->
                         <figure class="gallery-item rounded-xl overflow-hidden shadow-md bg-white">
-
                             <!-- Image -->
-                            <img src="TODO" alt="TODO" class="w-full h-48 object-cover" loading="lazy">
+                            <img src="/assets/gallery/photos/solo_candid.jpeg" alt="Cameron candid picture" class="w-full h-48 object-cover" loading="lazy">
+                        </figure>
 
-                            <!-- Photo Description -->
-                            <figcaption class="p-4">
-                                <h4 class="font-medium">TITLE</h4>
-                                <p class="text-sm text-stone-700">DESCRIPTION</p>
-                            </figcaption>
+                        <!-- Photo 2 -->
+                        <figure class="gallery-item rounded-xl overflow-hidden shadow-md bg-white">
+                            <!-- Image -->
+                            <img src="/assets/gallery/photos/solo_professional.jpeg" alt="Cameron solo professional picture" class="w-full h-48 object-cover" loading="lazy">
+                        </figure>
+
+                        <!-- Photo 3 -->
+                        <figure class="gallery-item rounded-xl overflow-hidden shadow-md bg-white">
+                            <!-- Image -->
+                            <img src="/assets/gallery/photos/solo_nature.jpeg" alt="Cameron solo nature picture" class="w-full h-48 object-cover" loading="lazy">
+                        </figure>
+
+                        <!-- Photo 4 -->
+                        <figure class="gallery-item rounded-xl overflow-hidden shadow-md bg-white">
+                            <!-- Image -->
+                            <img src="/assets/gallery/photos/solo_red.jpeg" alt="Cameron solo red picture" class="w-full h-48 object-cover" loading="lazy">
+                        </figure>
+
+                        <!-- Photo 5 -->
+                        <figure class="gallery-item rounded-xl overflow-hidden shadow-md bg-white">
+                            <!-- Image -->
+                            <img src="/assets/gallery/photos/solo_spain.jpeg" alt="Cameron solo spain picture" class="w-full h-48 object-cover" loading="lazy">
+                        </figure>
+
+                        <!-- Photo 6 -->
+                        <figure class="gallery-item rounded-xl overflow-hidden shadow-md bg-white">
+                            <!-- Image -->
+                            <img src="/assets/gallery/photos/group_black.jpeg" alt="Cameron group black picture" class="w-full h-48 object-cover" loading="lazy">
+                        </figure>
+
+                        <!-- Photo 7 -->
+                        <figure class="gallery-item rounded-xl overflow-hidden shadow-md bg-white">
+                            <!-- Image -->
+                            <img src="/assets/gallery/photos/group_flowers.jpeg" alt="Cameron group flowers picture" class="w-full h-48 object-cover" loading="lazy">
+                        </figure>
+
+                        <!-- Photo 8 -->
+                        <figure class="gallery-item rounded-xl overflow-hidden shadow-md bg-white">
+                            <!-- Image -->
+                            <img src="/assets/gallery/photos/group_hard.jpeg" alt="Cameron group hard picture" class="w-full h-48 object-cover" loading="lazy">
+                        </figure>
+
+                        <!-- Photo 9 -->
+                        <figure class="gallery-item rounded-xl overflow-hidden shadow-md bg-white">
+                            <!-- Image -->
+                            <img src="/assets/gallery/photos/group_lanyards.jpeg" alt="Cameron group lanyards picture" class="w-full h-48 object-cover" loading="lazy">
+                        </figure>
+
+                        <!-- Photo 10 -->
+                        <figure class="gallery-item rounded-xl overflow-hidden shadow-md bg-white">
+                            <!-- Image -->
+                            <img src="/assets/gallery/photos/group_red.jpeg" alt="Cameron group lanyards picture" class="w-full h-48 object-cover" loading="lazy">
+                        </figure>
+
+                        <!-- Photo 11 -->
+                        <figure class="gallery-item rounded-xl overflow-hidden shadow-md bg-white">
+                            <!-- Image -->
+                            <img src="/assets/gallery/photos/group_spain_night.jpeg" alt="Cameron group lanyards picture" class="w-full h-48 object-cover" loading="lazy">
+                        </figure>
+
+                        <!-- Photo 12 -->
+                        <figure class="gallery-item rounded-xl overflow-hidden shadow-md bg-white">
+                            <!-- Image -->
+                            <img src="/assets/hero/solo_professional_vertical.jpeg" alt="Cameron group lanyards picture" class="w-full h-48 object-cover" loading="lazy">
                         </figure>
                     </div>
                 </div>
@@ -440,113 +743,20 @@
                     <h3 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center">Videos</h3>
 
                     <!-- Video Card Layout -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="grid grid-cols-1 gap-8">
 
                         <!-- Video 1 -->
                         <article class="gallery-item bg-white rounded-xl overflow-hidden shadow-md">
                             
                             <!-- Video / Image -->
                             <div class="aspect-w-16 aspect-h-9">
-                                <iframe class="w-full h-64" src="https://www.youtube.com/embed/TULzRqEarcw" title="Cameron Becker performing Chain by Kazunori Miyake" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                                <iframe class="w-full h-80" src="https://www.youtube.com/embed/TULzRqEarcw" title="Cameron Becker performing Chain by Kazunori Miyake" frameborder="0" allowfullscreen loading="lazy"></iframe>
                             </div>
 
                             <!-- Video Description -->
                             <div class="p-4">
                                 <h4 class="font-medium">Chain - Kazunori Miyake performed by Cameron Becker</h4>
-                                <p class="text-sm text-stone-700">DESCRIPTION</p>
-                            </div>
-                        </article>
-
-                        <!-- Video 2 -->
-                        <article class="gallery-item bg-white rounded-xl overflow-hidden shadow-md">
-                            
-                            <!-- Video / Image -->
-                            <div class="aspect-w-16 aspect-h-9">
-                                <iframe class="w-full h-64" src="https://www.youtube.com/embed/MQuQqbY_TzY" title="Cameron Becker performing Chain by Kazunori Miyake" frameborder="0" allowfullscreen loading="lazy"></iframe>
-                            </div>
-
-                            <!-- Video Description -->
-                            <div class="p-4">
-                                <h4 class="font-medium">LIP 2025 Finals Day - Field Cam</h4>
-                                <p class="text-sm text-stone-700">DESCRIPTION</p>
-                            </div>
-                        </article>
-
-                        <!-- Video 3 -->
-                        <article class="gallery-item bg-white rounded-xl overflow-hidden shadow-md">
-                            
-                            <!-- Video / Image -->
-                            <div class="aspect-w-16 aspect-h-9">
-                                <iframe class="w-full h-64" src="https://www.youtube.com/embed/jtLZbKAI39c" title="Cameron Becker performing Chain by Kazunori Miyake" frameborder="0" allowfullscreen loading="lazy"></iframe>
-                            </div>
-
-                            <!-- Video Description -->
-                            <div class="p-4">
-                                <h4 class="font-medium">BK 2024 Ageout Cirgle - Go On</h4>
-                                <p class="text-sm text-stone-700">DESCRIPTION</p>
-                            </div>
-                        </article>
-
-                        <!-- Video 4 -->
-                        <article class="gallery-item bg-white rounded-xl overflow-hidden shadow-md">
-                            
-                            <!-- Video / Image -->
-                            <div class="aspect-w-16 aspect-h-9">
-                                <iframe class="w-full h-64" src="https://www.youtube.com/embed/hc0qapU5kN8" title="Cameron Becker performing Chain by Kazunori Miyake" frameborder="0" allowfullscreen loading="lazy"></iframe>
-                            </div>
-
-                            <!-- Video Description -->
-                            <div class="p-4">
-                                <h4 class="font-medium">Playing with BC Manjunath - Korvai in Khanda Gathi</h4>
-                                <p class="text-sm text-stone-700">DESCRIPTION</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                
-                <!-- Project Section -->
-                <div class="mb-12">
-
-                    <!-- Section Title -->
-                    <h3 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center">My Projects</h3>
-
-                    <!-- Project Card Layout -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                        <!-- Project 1 -->
-                        <article class="project-card bg-white rounded-xl overflow-hidden shadow-xl transition duration-300" itemscope itemtype="https://schema.org/CreativeWork">
-
-                            <!-- Image w/Overlay -->
-                            <div class="relative h-48 overflow-hidden">
-                                <img src="TODO" alt="TODO" class="w-full h-full object-cover" itemprop="image">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-40"></div>
-                            </div>
-
-                            <!-- Project Content Area -->
-                            <div class="p-6">
-
-                                <!-- Project Title and Action Icons -->
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="text-xl font-semibold" itemprop="headline">TITLE</h4>
-
-                                    <!-- External Site Links -->
-                                    <div class="flex space-x-2">
-                                        <a href="TODO" target="_blank" rel="noopener noreferrer" class="text-stone-700 hover:text-purple-500" aria-label="Project details"><i class="fas fa-external-link-alt"></i></a>
-                                    </div>
-                                </div>
-
-                                <!-- Content Description -->
-                                <p class="text-stone-700 mb-4" itemprop="description">
-                                    DESCRIPTION
-                                </p>
-                                <meta itemprop="author" content="Cameron Becker">
-
-                                <!-- Other attributes -->
-                                <div class="flex flex-wrap gap-2 text-xs">
-                                    <span class="px-2 py-1 bg-blue-700 text-white rounded">FEATURE</span>
-                                    <span class="px-2 py-1 bg-blue-700 text-white rounded">FEATURE</span>
-                                    <span class="px-2 py-1 bg-blue-700 text-white rounded">FEAUTRE</span>
-                                </div>
+                                <p class="text-sm text-stone-700">Performed at Colorado State University. Recorded/Edited by Taylor Smith.</p>
                             </div>
                         </article>
                     </div>
@@ -554,256 +764,9 @@
                 
                 <!-- CTA Button to View more Content-->
                 <div class="text-center mt-10">
-                    <a href="TODO" target="_blank" rel="noopener noreferrer" class="px-6 py-3 border border-black rounded-lg font-medium hover:bg-black hover:text-white transition inline-flex items-center" aria-label="TODO">
+                    <a href="https://www.instagram.com/uhhcambecker/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 border border-black rounded-lg font-medium hover:bg-black hover:text-white transition inline-flex items-center" aria-label="TODO">
                         View More Content <i class="fas fa-arrow-right ml-2"></i>
                     </a>
-                </div>
-            </div>
-        </section>
-
-        <!-------------------------------->
-        <!-- Experience Section -->
-        <!-------------------------------->
-        <section id="experience" class="py-20 bg-black bg-opacity-90 backdrop-blur-md text-white">
-
-            <!-- Outer Container -->
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-                <!-- Section Heading -->
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
-                        Experience & <span class="gradient-text">Skills</span>
-                    </h2>
-
-                    <!-- Underline -->
-                    <div class="w-28 h-1 bg-gradient-to-r from-emerald-500 to-emerald-700 mx-auto"></div>
-                </div>
-            
-                <!-- Timeline Section -->
-                <div class="max-w-3xl mx-auto mb-20 space-y-8">
-                    
-                    <!-- Experience 1 -->
-                    <div class="timeline-item relative pl-16">
-                        
-                        <!-- Left Side -->
-                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-stone-700 to-emerald-700 flex items-center justify-center">
-                            <i class="fas fa-briefcase text-white"></i>
-                        </div>
-
-                        <!-- Right Side -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-
-                            <!-- Title & Timeline -->
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                                <h3 class="text-xl font-semibold text-black">TODO</h3>
-                                <span class="text-sm text-stone-700">TODO - TODO</span>
-                            </div>
-
-                            <!-- Location & Description -->
-                            <h4 class="text-emerald-500 mb-3">TODO</h4>
-                            <p class="text-stone-700">TODO</p>
-                        </div>
-                    </div>
-            
-                    <!-- Experience 2 -->
-                    <div class="timeline-item relative pl-16">
-
-                        <!-- Left Side -->
-                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-stone-700 to-emerald-700 flex items-center justify-center">
-                            <i class="fas fa-briefcase text-white"></i>
-                        </div>
-
-                        <!-- Right Side -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-
-                            <!-- Title & Timeline -->
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                                <h3 class="text-xl font-semibold text-black">TODO</h3>
-                                <span class="text-sm text-stone-700">TODO - TODO</span>
-                            </div>
-
-                            <!-- Location & Description -->
-                            <h4 class="text-emerald-500 mb-3">TODO</h4>
-                            <p class="text-stone-700">TODO</p>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Skills Section -->
-                <div class="text-center mb-16">
-                    <h3 class="text-3xl sm:text-4xl md:text-5xl sm:text-4xl font-bold mb-4">
-                        Musical & <span class="gradient-text">Professional Skills</span>
-                    </h3>
-                </div>
-            
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
-            
-                    <!-- Instruments -->
-                    <div>
-                        <h4 class="text-xl font-bold mb-6">Instruments</h4>
-                        <div class="space-y-6">
-                            <div>
-                                <div class="flex justify-between mb-2"><span>Drumset</span><span>67%</span></div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 67%"></div></div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2"><span>Marimba</span><span>70%</span></div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2"><span>Vibraphone</span><span>40%</span></div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 40%"></div></div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2"><span>Timpani</span><span>39%</span></div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 39%"></div></div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2"><span>Snare Drum</span><span>45%</span></div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 45%"></div></div>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <!-- Professional -->
-                    <div>
-                        <h4 class="text-xl font-bold mb-6">Professional</h4>
-                        <div class="space-y-6">
-                            <div>
-                                <div class="flex justify-between mb-2"><span>Sight-Reading</span><span>95%</span></div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2"><span>Communication</span><span>90%</span></div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2"><span>Team Work</span><span>85%</span></div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2"><span>Project Management</span><span>70%</span></div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2"><span>Creativity</span><span>95%</span></div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2"><span>Leadership</span><span>84%</span></div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 84%"></div></div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2"><span>Problem Solving</span><span>90%</span></div>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-------------------------------->
-        <!-- Booking Section -->
-        <!-------------------------------->
-        <section id="booking" class="py-20">
-
-            <!-- Outer Container -->
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          
-                <!-- Section Heading -->
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
-                        You Can <span class="gradient-text">Book Me</span>
-                    </h2>
-
-                    <!-- Underline -->
-                    <div class="w-28 h-1 bg-gradient-to-r from-emerald-500 to-emerald-700 mx-auto"></div>
-                </div>
-            
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-                    <!-- Drum Set Lessons -->
-                    <div class="booking-card bg-white rounded-xl border shadow-lg p-6 flex flex-col justify-between">
-
-                        <!-- Title -->
-                        <h3 class="text-xl sm:text-2xl font-bold text-blue-500 mb-2">Drum Set Lessons</h3>
-
-                        <!-- Subheading -->
-                        <p class="mb-4 text-stone-700">
-                            One-on-one drum set lessons catered towards you and your needs.
-                        </p>
-
-                        <!-- Cost -->
-                        <p class="text-xl sm:text-2xl font-semibold mb-4">$25/hr</p>
-
-                        <!-- Features -->
-                        <ul class="space-y-2 text-sm text-stone-700 mb-6 text-left">
-                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Beginner to Advanced</li>
-                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Personalized Guidance</li>
-                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Flexible Scheduling</li>
-                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Online & In-person</li>
-                        </ul>
-
-                        <!-- CTA Button -->
-                        <a href="#contact" class="bg-blue-600 text-stone-100 py-2 px-4 rounded hover:bg-blue-700 transition">
-                            Inquire Now
-                        </a>
-                    </div>
-            
-                    <!-- Music Lessons -->
-                    <div class="booking-card bg-white rounded-xl border shadow-lg p-6 flex flex-col justify-between">
-
-                        <!-- Title -->
-                        <h3 class="text-xl sm:text-2xl font-bold text-purple-500 mb-2">Music Lessons</h3>
-
-                        <!-- Subheading -->
-                        <p class="mb-4 text-stone-700">
-                            Private music lessons from singing, song writing, classical percussion, orchestral percussion, reading, and more tailored to your needs.
-                        </p>
-
-                        <!-- Cost -->
-                        <p class="text-xl sm:text-2xl font-semibold mb-4">$30/hr</p>
-
-                        <!-- Features -->
-                        <ul class="space-y-2 text-sm text-stone-700 mb-6 text-left">
-                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Beginner to Advanced</li>
-                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Personalized Guidance</li>
-                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Flexible Scheduling</li>
-                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Online & In-person</li>
-                        </ul>
-
-                        <!-- CTA Button -->
-                        <a href="#contact" class="bg-purple-500 text-stone-100 py-2 px-4 rounded hover:bg-purple-700 transition">
-                            Book a Lesson
-                        </a>
-                    </div>
-            
-                    <!-- Band Performance -->
-                    <div class="booking-card bg-white rounded-xl border shadow-lg p-6 flex flex-col justify-between">
-
-                        <!-- Title -->
-                        <h3 class="text-xl sm:text-2xl font-bold text-emerald-500 mb-2">Live Performance</h3>
-
-                        <!-- Subheading -->
-                        <p class="mb-4 text-stone-700">
-                            Hire me or my band for gigs, recitals, or collabs.
-                        </p>
-
-                        <!-- Cost -->
-                        <p class="text-xl sm:text-2xl font-semibold mb-4">Starting at $50/Event</p>
-
-                        <!-- Features -->
-                        <ul class="space-y-2 text-sm text-stone-700 mb-6 text-left">
-                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Solo or band sets</li>
-                            <li><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Custom setlists</li>
-                        </ul>
-
-                        <!-- CTA Button -->
-                        <a href="#contact" class="bg-emerald-500 text-stone-100 py-2 px-4 rounded hover:bg-emerald-700 transition">
-                            Get in Touch
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -882,10 +845,10 @@
 
                             <!-- Social Buttons -->
                             <div class="flex space-x-4">
-                                <a href="TODO" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center hover:border-red-500 hover:bg-red-500 hover:text-stone-100 transition" aria-label="YouTube">
+                                <a href="https://www.youtube.com/@CameronBecker26" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center hover:border-red-500 hover:bg-red-500 hover:text-stone-100 transition" aria-label="YouTube">
                                     <i class="fab fa-youtube"></i>
                                 </a>
-                                <a href="TODO" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center hover:border-pink-500 hover:bg-pink-500 hover:text-stone-100 transition" aria-label="Instagram">
+                                <a href="https://www.instagram.com/uhhcambecker/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center hover:border-pink-500 hover:bg-pink-500 hover:text-stone-100 transition" aria-label="Instagram">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </div>
